@@ -9,6 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                archiveArtifacts artifacts: 'AddTwoNumbers.vi', followSymlinks: false
             }
         }
         stage('Test') {
